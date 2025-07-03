@@ -21,7 +21,7 @@ const ProfileForm = ({ onClose }) => {
 
   // Create axios instance
   const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: `${import.meta.env.VITE_APP_URL}/api`,
   });
 
   // Add auth token to requests

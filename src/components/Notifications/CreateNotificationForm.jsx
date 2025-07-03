@@ -26,7 +26,7 @@ const CreateNotificationForm = ({ onClose, onSubmit }) => {
     setLoading(true);
     setResponse(null);
     try {
-      const res = await axios.post('http://localhost:5000/api/notifications', formData,{
+      const res = await axios.post(`${import.meta.env.VITE_APP_URL}/api/notifications`, formData,{
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`,

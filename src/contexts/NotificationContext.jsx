@@ -27,7 +27,7 @@ export const NotificationProvider = ({ children }) => {
     fetchNotifications();
 
     // Initialize socket connection
-    const newSocket = io('http://localhost:5000', {
+    const newSocket = io(`${import.meta.env.VITE_APP_URL}`, {
       withCredentials: true,
     });
     setSocket(newSocket);
