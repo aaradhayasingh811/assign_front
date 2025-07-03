@@ -197,7 +197,7 @@ const MultiStepRegistration = ({ onClose, onSuccess }) => {
   const [loading, setLoading] = useState(false);
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
 
-  const API_URL = 'http://localhost:5000/api';
+  const API_URL = `${import.meta.env.VITE_APP_URL}/api`;
 
   const validateStep = (step) => {
     const newErrors = {};
